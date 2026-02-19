@@ -53,7 +53,6 @@
           <span style="font-size: 0.95rem;">Resume</span>
         </a>
       </div>
-      </div>
       
       <button class="menu-toggle" aria-label="Toggle menu">
         <span></span>
@@ -111,8 +110,8 @@
                 </div>
               </div>
               <div style="margin-top: 1rem; text-align: center;">
-                <button id="slider-prev" class="btn btn-secondary" style="margin-right: 0.5rem;">Education</button>
-                <button id="slider-next" class="btn btn-primary">Job History</button>
+                <button id="btn-education" class="btn btn-primary" style="margin-right: 0.5rem;" onclick="showSlide('education')">Education</button>
+                <button id="btn-jobs" class="btn btn-secondary" onclick="showSlide('jobs')">Job History</button>
               </div>
             </div>
           </div>
@@ -167,6 +166,27 @@
       <p>&copy; 2026 Aidan Ash. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Slider Script -->
+  <script>
+    function showSlide(which) {
+      var edu = document.getElementById('education-slide');
+      var job = document.getElementById('job-slide');
+      var btnEdu = document.getElementById('btn-education');
+      var btnJob = document.getElementById('btn-jobs');
+      if (which === 'education') {
+        edu.style.display = '';
+        job.style.display = 'none';
+        btnEdu.className = 'btn btn-primary';
+        btnJob.className = 'btn btn-secondary';
+      } else {
+        edu.style.display = 'none';
+        job.style.display = '';
+        btnEdu.className = 'btn btn-secondary';
+        btnJob.className = 'btn btn-primary';
+      }
+    }
+  </script>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
