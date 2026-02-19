@@ -58,44 +58,51 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content" style="max-width: 600px; margin: 0 auto; text-align: center;">
-        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Aidan Ash</h1>
-        <p style="font-size: 1.1rem; margin-bottom: 0.2rem;">Data Scientist</p>
-        <p style="font-size: 1rem; margin-bottom: 0.2rem;">Pittsburgh, PA & Chicago, IL</p>
-        <p style="font-size: 1rem; margin-bottom: 0.2rem;">Incoming IT Intern @ Arconic</p>
-        <p style="font-size: 1rem; margin-bottom: 1.2rem;">Illinois Tech B.S. CS & M.A.S. DS '27</p>
-      </div>
-    </section>
-
-    <!-- Slider Section -->
     <section class="section" style="padding: 2rem 0;">
       <div class="container">
-        <div id="slider" style="max-width: 600px; margin: 0 auto;">
-          <div class="slider-content">
-            <div class="slide" id="education-slide">
-              <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Education</h2>
-              <ul style="font-size: 1rem;">
-                <li>Illinois Institute of Technology</li>
-                <li>B.S. Computer Science</li>
-                <li>M.A.S. Data Science</li>
-                <li>Expected Graduation: 2027</li>
-              </ul>
-            </div>
-            <div class="slide" id="job-slide" style="display:none;">
-              <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Job History</h2>
-              <ul style="font-size: 1rem;">
-                <li>Incoming IT Intern @ Arconic</li>
-                <li>IT Intern @ Fox Chapel Area School District</li>
-                <li>Game Developer @ CAsh Interactive</li>
-              </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+          <!-- Personal Info Left -->
+          <div style="flex: 1 1 320px; min-width: 280px; max-width: 350px;">
+            <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Aidan Ash</h1>
+            <p style="font-size: 1rem; margin-bottom: 0.2rem;">Data Scientist</p>
+            <p style="font-size: 0.95rem; margin-bottom: 0.2rem;">Pittsburgh, PA & Chicago, IL</p>
+            <p style="font-size: 0.95rem; margin-bottom: 0.2rem;">Incoming IT Intern @ Arconic</p>
+            <p style="font-size: 0.95rem; margin-bottom: 1rem;">Illinois Tech B.S. CS & M.A.S. DS '27</p>
+            <hr style="margin: 1rem 0;">
+            <div style="font-size: 0.95rem;">
+              <strong>Email:</strong> <a href="mailto:aidan.ash@email.com">aidan.ash@email.com</a><br>
+              <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aidan-ash-806641283/" target="_blank">aidan-ash-806641283</a><br>
+              <strong>GitHub:</strong> <a href="https://github.com/Aidan2426" target="_blank">Aidan2426</a>
             </div>
           </div>
-          <div style="margin-top: 1rem; text-align: center;">
-            <button id="slider-prev" class="btn btn-secondary" style="margin-right: 0.5rem;">Education</button>
-            <button id="slider-next" class="btn btn-primary">Job History</button>
+
+          <!-- Slider Right -->
+          <div style="flex: 2 1 400px; min-width: 320px;">
+            <div id="slider" style="max-width: 500px; margin: 0 auto;">
+              <div class="slider-content">
+                <div class="slide" id="education-slide">
+                  <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Education</h2>
+                  <ul style="font-size: 0.98rem;">
+                    <li>Illinois Institute of Technology</li>
+                    <li>B.S. Computer Science</li>
+                    <li>M.A.S. Data Science</li>
+                    <li>Expected Graduation: 2027</li>
+                  </ul>
+                </div>
+                <div class="slide" id="job-slide" style="display:none;">
+                  <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Job History</h2>
+                  <ul style="font-size: 0.98rem;">
+                    <li><strong>Arconic Corporation</strong> — Information Technology Intern<br><span style="color: #888;">Summer 2026 (Upcoming)</span></li>
+                    <li><strong>Norwin School District</strong> — IT Summer Intern<br><span style="color: #888;">May 2025 - August 2025 (3 months)</span></li>
+                    <li><strong>Carwens Boarding and Grooming</strong> — Facilities Manager & Kennel Assistant<br><span style="color: #888;">May 2021 - August 2025 (4 years 3 months)</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div style="margin-top: 1rem; text-align: center;">
+                <button id="slider-prev" class="btn btn-secondary" style="margin-right: 0.5rem;">Education</button>
+                <button id="slider-next" class="btn btn-primary">Job History</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

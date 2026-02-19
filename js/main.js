@@ -268,3 +268,29 @@ backToTopButton.addEventListener('mouseleave', () => {
 });
 
 console.log('Portfolio website loaded successfully! 🚀');
+// Slider functionality for index.html
+document.addEventListener('DOMContentLoaded', function() {
+  const eduSlide = document.getElementById('education-slide');
+  const jobSlide = document.getElementById('job-slide');
+  const prevBtn = document.getElementById('slider-prev');
+  const nextBtn = document.getElementById('slider-next');
+
+  if (eduSlide && jobSlide && prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', function() {
+      eduSlide.style.display = '';
+      jobSlide.style.display = 'none';
+      prevBtn.classList.add('btn-primary');
+      prevBtn.classList.remove('btn-secondary');
+      nextBtn.classList.add('btn-secondary');
+      nextBtn.classList.remove('btn-primary');
+    });
+    nextBtn.addEventListener('click', function() {
+      eduSlide.style.display = 'none';
+      jobSlide.style.display = '';
+      prevBtn.classList.add('btn-secondary');
+      prevBtn.classList.remove('btn-primary');
+      nextBtn.classList.add('btn-primary');
+      nextBtn.classList.remove('btn-secondary');
+    });
+  }
+});
