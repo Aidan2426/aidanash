@@ -61,15 +61,42 @@
     
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <span class="hero-tag">Computer Science & Data Science</span>
-        <h1>Hi, I'm <span>Aidan Ash</span></h1>
-        <p class="hero-subtitle">
-          Graduate student at Illinois Institute of Technology, passionate about building innovative solutions through code and data.
-        </p>
-        <div class="hero-buttons">
-          <a href="project.html" class="btn btn-primary">View Projects</a>
-          <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+      <div class="hero-content" style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Aidan Ash</h1>
+        <p style="font-size: 1.1rem; margin-bottom: 0.2rem;">Data Scientist</p>
+        <p style="font-size: 1rem; margin-bottom: 0.2rem;">Pittsburgh, PA & Chicago, IL</p>
+        <p style="font-size: 1rem; margin-bottom: 0.2rem;">Incoming IT Intern @ Arconic</p>
+        <p style="font-size: 1rem; margin-bottom: 1.2rem;">Illinois Tech B.S. CS & M.A.S. DS '27</p>
+      </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="section" style="padding: 2rem 0;">
+      <div class="container">
+        <div id="slider" style="max-width: 600px; margin: 0 auto;">
+          <div class="slider-content">
+            <div class="slide" id="education-slide">
+              <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Education</h2>
+              <ul style="font-size: 1rem;">
+                <li>Illinois Institute of Technology</li>
+                <li>B.S. Computer Science</li>
+                <li>M.A.S. Data Science</li>
+                <li>Expected Graduation: 2027</li>
+              </ul>
+            </div>
+            <div class="slide" id="job-slide" style="display:none;">
+              <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Job History</h2>
+              <ul style="font-size: 1rem;">
+                <li>Incoming IT Intern @ Arconic</li>
+                <li>IT Intern @ Fox Chapel Area School District</li>
+                <li>Game Developer @ CAsh Interactive</li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top: 1rem; text-align: center;">
+            <button id="slider-prev" class="btn btn-secondary" style="margin-right: 0.5rem;">Education</button>
+            <button id="slider-next" class="btn btn-primary">Job History</button>
+          </div>
         </div>
       </div>
     </section>
@@ -77,124 +104,34 @@
     <!-- Featured Projects Section -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        
+        <h2 class="section-title">Main Project</h2>
         <div class="cards-grid">
-          
-          <!-- Heather Game -->
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">🎮</div>
-              <div class="card-meta">February 2026</div>
+          <!-- Ashburn Project Only -->
+          <a href="https://ashburnwatch.com" target="_blank" style="text-decoration: none;">
+            <div class="card" style="cursor: pointer;">
+              <div class="card-header">
+                <div class="card-icon">⌚</div>
+                <div class="card-meta">In Progress</div>
+              </div>
+              <h3>Ashburn Watch</h3>
+              <p class="card-subtitle">Arduino-Based Step Tracker</p>
+              <p>
+                A custom-built wearable device that tracks steps and activity using Arduino technology. Features real-time data collection and display for fitness monitoring.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Hardware</span>
+              </div>
             </div>
-            <h3>Heather.</h3>
-            <p class="card-subtitle">Narrative Game | 48hr Game Jam</p>
-            <p>
-              A short narrative-driven game about confronting a troubled past. Explores themes of grief and forgiveness through interactive storytelling. Created with CAsh Interactive for Micro Jam 053.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Unity</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">Game Design</span>
-              <span class="tech-tag">Narrative</span>
-            </div>
-          </div>
-
-          <!-- Ashburn Project -->
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">⌚</div>
-              <div class="card-meta">In Progress</div>
-            </div>
-            <h3>Ashburn</h3>
-            <p class="card-subtitle">Arduino-Based Step Tracker</p>
-            <p>
-              A custom-built wearable device that tracks steps and activity using Arduino technology. Features real-time data collection and display for fitness monitoring.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Arduino</span>
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">IoT</span>
-              <span class="tech-tag">Hardware</span>
-            </div>
-          </div>
-
-          <!-- Real Estate App -->
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">🏠</div>
-              <div class="card-meta">2025</div>
-            </div>
-            <h3>Real Estate Management</h3>
-            <p class="card-subtitle">Database-Driven Application</p>
-            <p>
-              Full-stack application with user registration, property search, and booking features. Implemented optimized PostgreSQL queries with indexing for enhanced performance.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">pgAdmin</span>
-            </div>
-          </div>
-
-          <!-- P33 Savings App -->
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">💰</div>
-              <div class="card-meta">2023</div>
-            </div>
-            <h3>P33 Savings App</h3>
-            <p class="card-subtitle">Financial Management Tool</p>
-            <p>
-              College student savings application developed in partnership with Chase Bank. Features income/expense tracking, budgeting tools, and MySQL transaction logging.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Chase API</span>
-            </div>
-          </div>
-
-        </div>
-        
-        <div style="text-align: center; margin-top: 3rem;">
-          <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Quick Stats Section -->
-    <section class="section" style="background: var(--color-white); padding: 4rem 0;">
-      <div class="container">
-        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); text-align: center;">
-          
-          <div class="card">
-            <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">3.5</h3>
-            <p style="color: var(--color-blue); font-weight: 600;">GPA</p>
-            <p style="font-size: 0.9rem;">Cumulative at IIT</p>
-          </div>
-
-          <div class="card">
-            <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">5K+</h3>
-            <p style="color: var(--color-blue); font-weight: 600;">Devices Managed</p>
-            <p style="font-size: 0.9rem;">During IT internship</p>
-          </div>
-
-          <div class="card">
-            <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">7+</h3>
-            <p style="color: var(--color-blue); font-weight: 600;">Languages</p>
-            <p style="font-size: 0.9rem;">Python, Java, SQL, C & more</p>
-          </div>
-
-          <div class="card">
-            <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">2027</h3>
-            <p style="color: var(--color-blue); font-weight: 600;">Graduation</p>
-            <p style="font-size: 0.9rem;">Master's in Data Science</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <!-- Quick Stats Section removed -->
 
   </main>
 
