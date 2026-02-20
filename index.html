@@ -19,7 +19,7 @@
     .info-left {
       flex:1 1 280px; min-width:240px; max-width:310px; padding-left:1rem;
     }
-    .info-left h1 { font-size:1.85rem; margin-bottom:0.3rem; }
+    .info-left h1 { font-size:1.55rem; margin-bottom:0.3rem; line-height:1.25; }
     .info-left p  { font-size:0.88rem; margin-bottom:0.18rem; color:#64748b; }
     .divider { border:none; border-top:1px solid #e2e8f0; margin:0.85rem 0; }
     .skills-section-label { font-size:0.82rem; font-weight:600; margin-bottom:0.45rem; }
@@ -80,7 +80,7 @@
       box-shadow:0 2px 12px rgba(0,0,0,.06); user-select:none;
     }
     .photo-carousel img {
-      width:100%; height:420px; object-fit:cover;
+      width:100%; height:500px; object-fit:cover; object-position:center top;
       display:block; transition:opacity 0.18s ease;
     }
     .carousel-overlay {
@@ -147,14 +147,14 @@
   <!-- Main Content -->
   <main class="main-content">
     <section class="section" style="padding:2rem 0 1rem;">
-      <div class="container" style="padding-top:1.5rem;padding-bottom:2rem;">
+      <div class="container" style="padding:1.5rem 5rem 2rem;max-width:1200px;">
 
         <!-- ── ROW 1: Info + Photo Carousel ──────────────────────── -->
         <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;margin-bottom:2rem;">
 
           <!-- Personal Info + Skills -->
           <div class="info-left">
-            <h1>Aidan Ash</h1>
+            <h1>Hey, I'm Aidan Ash</h1>
             <p>Data Scientist &amp; CS Student</p>
             <p>Pittsburgh, PA &amp; Chicago, IL</p>
             <p>Incoming IT Intern @ Arconic</p>
@@ -362,6 +362,7 @@
           <div class="project-card-wrap">
             <a href="https://ashburn-puce.vercel.app/" target="_blank" style="text-decoration:none;display:block;height:100%;">
               <div class="card" style="cursor:pointer;height:100%;">
+                <img src="assets/ashBurnHome.png" alt="Ashburn Watch Dashboard" class="project-img">
                 <div class="card-header">
                   <div class="card-icon">⌚</div>
                   <div class="card-meta">In Progress</div>
@@ -385,15 +386,16 @@
               <img src="assets/heather.png" alt="Heather" class="project-img">
               <div class="card-header">
                 <div class="card-icon">🎮</div>
-                <div class="card-meta">Released</div>
+                <div class="card-meta">Feb 2026 · itch.io</div>
               </div>
               <h3>Heather</h3>
-              <p class="card-subtitle">2D Indie Game</p>
-              <p>An original 2D indie game featuring custom art, original gameplay mechanics, and hand-crafted design. My most recent personal game project.</p>
+              <p class="card-subtitle">48-Hour Game Jam</p>
+              <p>A 2D indie game built in 48 hours for a game jam, released on itch.io in February 2026. Features original art, hand-crafted gameplay mechanics, and unique design from start to finish.</p>
               <div class="tech-tags">
-                <span class="tech-tag">Game Dev</span>
+                <span class="tech-tag">Game Jam</span>
+                <span class="tech-tag">48 Hours</span>
+                <span class="tech-tag">itch.io</span>
                 <span class="tech-tag">2D</span>
-                <span class="tech-tag">Indie</span>
               </div>
             </div>
           </div>
