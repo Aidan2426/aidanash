@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/aidanashlogo.png">
 </head>
 <body>
 <script>
@@ -29,6 +29,8 @@
     if (icon) icon.textContent = isDark ? '☀️' : '🌙';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
+  var _accent = localStorage.getItem('accentColor');
+  if (_accent) document.documentElement.style.setProperty('--color-blue', _accent);
 </script>
 
   <!-- Navigation -->

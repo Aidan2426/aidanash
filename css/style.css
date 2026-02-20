@@ -359,6 +359,8 @@ a {
   border-color: var(--color-blue);
 }
 
+.project-row .card { border-color: var(--color-blue); }
+
 .card:hover::before {
   transform: scaleX(1);
 }
@@ -772,7 +774,19 @@ a {
   transition: opacity 0.2s;
 }
 #theme-toggle:hover { opacity: 0.7; }
-#theme-icon { filter: grayscale(1) contrast(2); }
+#theme-icon { filter: brightness(0); }
+body.dark-mode #theme-icon { filter: brightness(0) invert(1); }
+
+/* ── Accent Color Swatches ───────────────────── */
+.accent-swatch {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid transparent; cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+  outline: none; padding: 0;
+}
+.accent-swatch:hover { transform: scale(1.2); }
+.accent-swatch.active { border-color: #111 !important; box-shadow: 0 0 0 1px #fff inset; }
+body.dark-mode .accent-swatch.active { border-color: #fff !important; }
 
 /* ── Resume Link ─────────────────────────────── */
 .social-links .resume-link {
