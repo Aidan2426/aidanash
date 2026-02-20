@@ -72,6 +72,38 @@
       border:1px solid currentColor; border-radius:4px;
       padding:2px 7px; line-height:1.6;
     }
+
+    /* ── Photo Carousel ─────────────────────── */
+    .photo-carousel {
+      position:relative; border-radius:12px; overflow:hidden;
+      cursor:pointer; border:1px solid #e0e0e0;
+      box-shadow:0 2px 12px rgba(0,0,0,.06); user-select:none;
+    }
+    .photo-carousel img {
+      width:100%; height:420px; object-fit:cover;
+      display:block; transition:opacity 0.18s ease;
+    }
+    .carousel-overlay {
+      position:absolute; bottom:12px; right:12px;
+      background:rgba(0,0,0,.45); color:#fff;
+      padding:3px 10px; border-radius:20px; font-size:0.75rem;
+      pointer-events:none;
+    }
+    .carousel-dots { display:flex; justify-content:center; gap:7px; padding:10px 0 0; }
+    .carousel-dot {
+      width:8px; height:8px; border-radius:50%; background:#ccc;
+      cursor:pointer; transition:background 0.2s; display:inline-block;
+    }
+    .carousel-dot.active { background:#2563eb; }
+
+    /* ── Project Cards Row ──────────────────── */
+    .project-row { display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:2rem; }
+    .project-card-wrap { flex:1 1 calc(50% - 0.75rem); min-width:280px; display:flex; }
+    .project-card-wrap > a, .project-card-wrap > .card { width:100%; }
+    .project-img { width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem; display:block; }
+
+    /* wider slider for standalone row */
+    .slider-card-full { max-width:none !important; }
   </style>
 </head>
 <body>
@@ -114,11 +146,13 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <section class="section" style="padding:2rem 0;">
-      <div class="container">
-        <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;">
+    <section class="section" style="padding:2rem 0 1rem;">
+      <div class="container" style="padding-top:1.5rem;padding-bottom:2rem;">
 
-          <!-- ── Personal Info + Skills ──────────── -->
+        <!-- ── ROW 1: Info + Photo Carousel ──────────────────────── -->
+        <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;margin-bottom:2rem;">
+
+          <!-- Personal Info + Skills -->
           <div class="info-left">
             <h1>Aidan Ash</h1>
             <p>Data Scientist &amp; CS Student</p>
@@ -146,7 +180,6 @@
             <div class="skills-section-label">Skills</div>
 
             <div class="skills-icon-grid">
-              <!-- Languages -->
               <div class="skill-card">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" onerror="this.outerHTML='<span class=skill-emoji>🐍</span>'">
                 <span class="skill-label">Python</span>
@@ -179,7 +212,6 @@
                 <span class="skill-emoji">⚙️</span>
                 <span class="skill-label">Assembly</span>
               </div>
-              <!-- Tools & Platforms -->
               <div class="skill-card">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.outerHTML='<span class=skill-emoji>🔀</span>'">
                 <span class="skill-label">Git</span>
@@ -213,19 +245,130 @@
                 <span class="skill-label">Intune</span>
               </div>
             </div>
+          </div>
 
-            <!-- ── Featured Project ───────────────── -->
-            <hr class="divider">
-            <div class="skills-section-label">Featured Project</div>
-            <a href="https://ashburn-puce.vercel.app/" target="_blank" style="text-decoration:none;display:block;">
-              <div class="card" style="cursor:pointer;padding:0.75rem 0.9rem;margin-top:0.45rem;">
-                <div class="card-header" style="margin-bottom:0.3rem;">
-                  <div class="card-icon" style="font-size:1rem;">⌚</div>
+          <!-- Photo Carousel -->
+          <div style="flex:2 1 400px;min-width:300px;">
+            <div class="photo-carousel" onclick="nextPhoto()">
+              <img id="carousel-img" src="assets/meChicagoSign.jpg" alt="Aidan Ash">
+              <div class="carousel-overlay">
+                <span id="carousel-counter">1 / 4</span>
+              </div>
+            </div>
+            <div class="carousel-dots" id="carousel-dots">
+              <span class="carousel-dot active" onclick="goToPhoto(0,event)"></span>
+              <span class="carousel-dot" onclick="goToPhoto(1,event)"></span>
+              <span class="carousel-dot" onclick="goToPhoto(2,event)"></span>
+              <span class="carousel-dot" onclick="goToPhoto(3,event)"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── ROW 2: Work / Education Slider ────────────────────── -->
+        <div style="margin-bottom:2rem;">
+          <div class="slider-card slider-card-full">
+
+            <div class="tab-bar">
+              <button id="btn-work" class="btn btn-primary" onclick="showSlide('work')">Work</button>
+              <button id="btn-education" class="btn btn-secondary" onclick="showSlide('education')">Education</button>
+            </div>
+
+            <!-- Work -->
+            <div id="work-slide">
+              <div class="entry-row entry-divider">
+                <div class="logo-box">
+                  <img src="assets/Arconic.webp" alt="Arconic">
+                </div>
+                <div class="entry-body">
+                  <div class="entry-top">
+                    <strong>Arconic Corporation</strong>
+                    <span class="entry-meta">Summer 2026</span>
+                  </div>
+                  <p class="entry-sub">Information Technology Intern</p>
+                  <ul class="entry-bullets">
+                    <li>Supporting deployment of ServiceNow — Arconic's ITSM solution for tickets, requests, and asset tracking</li>
+                    <li>Implementing ServiceNow's Workflow Data Fabric to automate Active Directory user account administration</li>
+                    <li>Working with stakeholders to gather requirements and build workflows and technical components</li>
+                    <li>Collaborating with the AD team and Corporate IT Security team via APIs supplemented with custom PowerShell scripts</li>
+                    <li>Languages: JavaScript (ServiceNow), PowerShell (Active Directory)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="entry-row entry-divider">
+                <div class="logo-box">
+                  <img src="assets/Norwin.png" alt="Norwin School District">
+                </div>
+                <div class="entry-body">
+                  <div class="entry-top">
+                    <strong>Norwin School District</strong>
+                    <span class="entry-meta">May – Aug 2025</span>
+                  </div>
+                  <p class="entry-sub">IT Summer Intern</p>
+                  <ul class="entry-bullets">
+                    <li>Managed 5,000+ district devices using JAMF, ASM, Excel, and SherpaDesk</li>
+                    <li>Inventoried 2,000 iPads for resale, generating $100k+ in revenue</li>
+                    <li>Installed and configured wireless access points and punched Cat6 cable into IDF</li>
+                    <li>Ran 2,000+ ft of ethernet and maintained network hardware across 7 buildings district-wide</li>
+                    <li>Planned a building network configuration covering physical hardware, security, DNS, DHCP, Office 365, and Access Control</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="entry-row">
+                <div class="logo-box">🐾</div>
+                <div class="entry-body">
+                  <div class="entry-top">
+                    <strong>Carwens Boarding &amp; Grooming</strong>
+                    <span class="entry-meta">2021 – 2025</span>
+                  </div>
+                  <p class="entry-sub">Facilities Manager &amp; Kennel Assistant</p>
+                  <ul class="entry-bullets">
+                    <li>Achieved 90% camera coverage across a multi-building business by installing and configuring security camera systems</li>
+                    <li>Accomplished consistent property upkeep with weekly landscaping and maintenance</li>
+                    <li>Maintained the well-being of 150 dogs through feeding, exercise, and health monitoring</li>
+                    <li>Handled client payments and appointment scheduling with 99% client satisfaction</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div id="education-slide" style="display:none;">
+              <div class="entry-row">
+                <div class="logo-box">
+                  <img src="assets/illinoistech.png" alt="Illinois Tech">
+                </div>
+                <div class="entry-body">
+                  <div class="entry-top">
+                    <strong>Illinois Institute of Technology</strong>
+                    <span class="entry-meta">Aug 2023 – May 2027</span>
+                  </div>
+                  <p class="entry-sub">B.S. Computer Science</p>
+                  <p class="entry-sub">M.A.S. Data Science</p>
+                  <p class="entry-sub" style="font-size:0.75rem;color:#94a3b8;margin-top:0.15rem;">GPA 3.5 · Dean's List</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── ROW 3: Project Cards ───────────────────────────────── -->
+        <div class="project-row">
+
+          <!-- Ashburn Watch -->
+          <div class="project-card-wrap">
+            <a href="https://ashburn-puce.vercel.app/" target="_blank" style="text-decoration:none;display:block;height:100%;">
+              <div class="card" style="cursor:pointer;height:100%;">
+                <div class="card-header">
+                  <div class="card-icon">⌚</div>
                   <div class="card-meta">In Progress</div>
                 </div>
-                <h3 style="margin-bottom:0.1rem;font-size:0.95rem;">Ashburn Watch</h3>
-                <p class="card-subtitle" style="margin-bottom:0.25rem;font-size:0.78rem;">Arduino-Based Step Tracker</p>
-                <p style="font-size:0.78rem;margin-bottom:0.45rem;">A custom-built wearable device that tracks steps using Arduino technology.</p>
+                <h3>Ashburn Watch</h3>
+                <p class="card-subtitle">Arduino-Based Step Tracker</p>
+                <p>A custom-built wearable device that tracks steps and activity using Arduino technology. Features real-time data collection and display for fitness monitoring.</p>
                 <div class="tech-tags">
                   <span class="tech-tag">Arduino</span>
                   <span class="tech-tag">C++</span>
@@ -236,97 +379,27 @@
             </a>
           </div>
 
-          <!-- ── Work / Education Slider ─────────── -->
-          <div style="flex:2 1 400px;min-width:300px;">
-            <div class="slider-card">
-
-              <div class="tab-bar">
-                <button id="btn-work" class="btn btn-primary" onclick="showSlide('work')">Work</button>
-                <button id="btn-education" class="btn btn-secondary" onclick="showSlide('education')">Education</button>
+          <!-- Heather Game -->
+          <div class="project-card-wrap">
+            <div class="card" style="height:100%;">
+              <img src="assets/heather.png" alt="Heather" class="project-img">
+              <div class="card-header">
+                <div class="card-icon">🎮</div>
+                <div class="card-meta">Released</div>
               </div>
-
-              <!-- Work -->
-              <div id="work-slide">
-                <div class="entry-row entry-divider">
-                  <div class="logo-box">
-                    <img src="assets/Arconic.webp" alt="Arconic">
-                  </div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Arconic Corporation</strong>
-                      <span class="entry-meta">Summer 2026</span>
-                    </div>
-                    <p class="entry-sub">Information Technology Intern</p>
-                    <ul class="entry-bullets">
-                      <li>Supporting deployment of ServiceNow — Arconic's ITSM solution for tickets, requests, and asset tracking</li>
-                      <li>Implementing ServiceNow's Workflow Data Fabric to automate Active Directory user account administration</li>
-                      <li>Working with stakeholders to gather requirements and build workflows and technical components</li>
-                      <li>Collaborating with the AD team and Corporate IT Security team via APIs supplemented with custom PowerShell scripts</li>
-                      <li>Languages: JavaScript (ServiceNow), PowerShell (Active Directory)</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="entry-row entry-divider">
-                  <div class="logo-box">
-                    <img src="assets/Norwin.png" alt="Norwin School District">
-                  </div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Norwin School District</strong>
-                      <span class="entry-meta">May – Aug 2025</span>
-                    </div>
-                    <p class="entry-sub">IT Summer Intern</p>
-                    <ul class="entry-bullets">
-                      <li>Managed 5,000+ district devices using JAMF, ASM, Excel, and SherpaDesk</li>
-                      <li>Inventoried 2,000 iPads for resale, generating $100k+ in revenue</li>
-                      <li>Installed and configured wireless access points and punched Cat6 cable into IDF</li>
-                      <li>Ran 2,000+ ft of ethernet and maintained network hardware across 7 buildings district-wide</li>
-                      <li>Planned a building network configuration covering physical hardware, security, DNS, DHCP, Office 365, and Access Control</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="entry-row">
-                  <div class="logo-box">🐾</div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Carwens Boarding &amp; Grooming</strong>
-                      <span class="entry-meta">2021 – 2025</span>
-                    </div>
-                    <p class="entry-sub">Facilities Manager &amp; Kennel Assistant</p>
-                    <ul class="entry-bullets">
-                      <li>Achieved 90% camera coverage across a multi-building business by installing and configuring security camera systems</li>
-                      <li>Accomplished consistent property upkeep with weekly landscaping and maintenance</li>
-                      <li>Maintained the well-being of 150 dogs through feeding, exercise, and health monitoring</li>
-                      <li>Handled client payments and appointment scheduling with 99% client satisfaction</li>
-                    </ul>
-                  </div>
-                </div>
+              <h3>Heather</h3>
+              <p class="card-subtitle">2D Indie Game</p>
+              <p>An original 2D indie game featuring custom art, original gameplay mechanics, and hand-crafted design. My most recent personal game project.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Game Dev</span>
+                <span class="tech-tag">2D</span>
+                <span class="tech-tag">Indie</span>
               </div>
-
-              <!-- Education -->
-              <div id="education-slide" style="display:none;">
-                <div class="entry-row">
-                  <div class="logo-box">
-                    <img src="https://logo.clearbit.com/iit.edu" alt="IIT" onerror="this.outerHTML='<span style=font-size:1.1rem>🎓</span>'">
-                  </div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Illinois Institute of Technology</strong>
-                      <span class="entry-meta">Aug 2023 – May 2027</span>
-                    </div>
-                    <p class="entry-sub">B.S. Computer Science</p>
-                    <p class="entry-sub">M.A.S. Data Science</p>
-                    <p class="entry-sub" style="font-size:0.75rem;color:#94a3b8;margin-top:0.15rem;">GPA 3.5 · Dean's List</p>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
   </main>
@@ -353,6 +426,31 @@
         btnW.className = 'btn btn-secondary'; btnE.className = 'btn btn-primary';
       }
     }
+    /* ── Photo Carousel ────────────────────── */
+    var photos = [
+      'assets/meChicagoSign.jpg',
+      'assets/meNetworkRoom.jpg',
+      'assets/meWithBean.jpg',
+      'assets/meWithTalon.jpg'
+    ];
+    var currentPhoto = 0;
+    function updateCarousel() {
+      var img     = document.getElementById('carousel-img');
+      var counter = document.getElementById('carousel-counter');
+      var dots    = document.getElementById('carousel-dots').children;
+      img.style.opacity = '0';
+      setTimeout(function() {
+        img.src = photos[currentPhoto];
+        img.style.opacity = '1';
+        counter.textContent = (currentPhoto + 1) + ' / ' + photos.length;
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].className = 'carousel-dot' + (i === currentPhoto ? ' active' : '');
+        }
+      }, 120);
+    }
+    function nextPhoto() { currentPhoto = (currentPhoto + 1) % photos.length; updateCarousel(); }
+    function goToPhoto(idx, e) { e.stopPropagation(); currentPhoto = idx; updateCarousel(); }
+
     /* ── Sync toggle button icon ───────────── */
     (function() {
       var isDark = document.body.classList.contains('dark-mode');
