@@ -807,6 +807,9 @@ body.dark-mode .navbar {
   background: rgba(10, 10, 10, 0.75);
   border-bottom-color: #2a2a2a;
 }
+body.dark-mode .gh-chart-wrap {
+  border-color: #2e2e2e !important;
+}
 body.dark-mode .nav-links a {
   color: #d0d0d0;
 }
