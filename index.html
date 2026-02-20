@@ -39,7 +39,7 @@
 
     /* ── Slider Card ─────────────────────────────────────── */
     .slider-card {
-      max-width:540px; margin:0 auto; background:#fff;
+      max-width:540px; margin:0; background:#fff;
       border:1px solid #e2e8f0; border-radius:12px;
       padding:1.2rem 1.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06);
     }
@@ -128,77 +128,7 @@
   <main class="main-content">
     <section class="section" style="padding:2rem 0;">
       <div class="container">
-        <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;">
-
-          <!-- ── Work / Education Slider ─────────── -->
-          <div style="flex:2 1 400px;min-width:300px;">
-            <div class="slider-card">
-
-              <div class="tab-bar">
-                <button id="btn-work" class="btn btn-primary" onclick="showSlide('work')">Work</button>
-                <button id="btn-education" class="btn btn-secondary" onclick="showSlide('education')">Education</button>
-              </div>
-
-              <!-- Work -->
-              <div id="work-slide">
-                <div class="entry-row entry-divider">
-                  <div class="logo-box">
-                    <img src="assets/Arconic.webp" alt="Arconic">
-                  </div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Arconic Corporation</strong>
-                      <span class="entry-meta">Summer 2026</span>
-                    </div>
-                    <p class="entry-sub">Information Technology Intern</p>
-                  </div>
-                </div>
-
-                <div class="entry-row entry-divider">
-                  <div class="logo-box">
-                    <img src="assets/Norwin.png" alt="Norwin School District">
-                  </div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Norwin School District</strong>
-                      <span class="entry-meta">May – Aug 2025</span>
-                    </div>
-                    <p class="entry-sub">IT Summer Intern</p>
-                  </div>
-                </div>
-
-                <div class="entry-row">
-                  <div class="logo-box">🐾</div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Carwens Boarding &amp; Grooming</strong>
-                      <span class="entry-meta">2021 – 2025</span>
-                    </div>
-                    <p class="entry-sub">Facilities Manager &amp; Kennel Assistant</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Education -->
-              <div id="education-slide" style="display:none;">
-                <div class="entry-row">
-                  <div class="logo-box">
-                    <img src="https://logo.clearbit.com/iit.edu" alt="IIT" onerror="this.outerHTML='<span style=font-size:1.1rem>🎓</span>'">
-                  </div>
-                  <div class="entry-body">
-                    <div class="entry-top">
-                      <strong>Illinois Institute of Technology</strong>
-                      <span class="entry-meta">Expected 2027</span>
-                    </div>
-                    <p class="entry-sub">B.S. Computer Science</p>
-                    <p class="entry-sub">M.A.S. Data Science</p>
-                    <p class="entry-sub" style="font-size:0.75rem;color:#94a3b8;margin-top:0.15rem;">GPA 3.5 · Dean's List</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+        <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;">
 
           <!-- ── Personal Info + Skills ──────────── -->
           <div class="info-left">
@@ -279,33 +209,100 @@
                 <span class="skill-label">Intune</span>
               </div>
             </div>
+
+            <!-- ── Featured Project ───────────────── -->
+            <hr class="divider">
+            <div class="skills-section-label">Featured Project</div>
+            <a href="https://ashburn-puce.vercel.app/" target="_blank" style="text-decoration:none;display:block;">
+              <div class="card" style="cursor:pointer;padding:0.75rem 0.9rem;margin-top:0.45rem;">
+                <div class="card-header" style="margin-bottom:0.3rem;">
+                  <div class="card-icon" style="font-size:1rem;">⌚</div>
+                  <div class="card-meta">In Progress</div>
+                </div>
+                <h3 style="margin-bottom:0.1rem;font-size:0.95rem;">Ashburn Watch</h3>
+                <p class="card-subtitle" style="margin-bottom:0.25rem;font-size:0.78rem;">Arduino-Based Step Tracker</p>
+                <p style="font-size:0.78rem;margin-bottom:0.45rem;">A custom-built wearable device that tracks steps using Arduino technology.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Arduino</span>
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">IoT</span>
+                  <span class="tech-tag">Hardware</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- ── Work / Education Slider ─────────── -->
+          <div style="flex:2 1 400px;min-width:300px;">
+            <div class="slider-card">
+
+              <div class="tab-bar">
+                <button id="btn-work" class="btn btn-primary" onclick="showSlide('work')">Work</button>
+                <button id="btn-education" class="btn btn-secondary" onclick="showSlide('education')">Education</button>
+              </div>
+
+              <!-- Work -->
+              <div id="work-slide">
+                <div class="entry-row entry-divider">
+                  <div class="logo-box">
+                    <img src="assets/Arconic.webp" alt="Arconic">
+                  </div>
+                  <div class="entry-body">
+                    <div class="entry-top">
+                      <strong>Arconic Corporation</strong>
+                      <span class="entry-meta">Summer 2026</span>
+                    </div>
+                    <p class="entry-sub">Information Technology Intern</p>
+                  </div>
+                </div>
+
+                <div class="entry-row entry-divider">
+                  <div class="logo-box">
+                    <img src="assets/Norwin.png" alt="Norwin School District">
+                  </div>
+                  <div class="entry-body">
+                    <div class="entry-top">
+                      <strong>Norwin School District</strong>
+                      <span class="entry-meta">May – Aug 2025</span>
+                    </div>
+                    <p class="entry-sub">IT Summer Intern</p>
+                  </div>
+                </div>
+
+                <div class="entry-row">
+                  <div class="logo-box">🐾</div>
+                  <div class="entry-body">
+                    <div class="entry-top">
+                      <strong>Carwens Boarding &amp; Grooming</strong>
+                      <span class="entry-meta">2021 – 2025</span>
+                    </div>
+                    <p class="entry-sub">Facilities Manager &amp; Kennel Assistant</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div id="education-slide" style="display:none;">
+                <div class="entry-row">
+                  <div class="logo-box">
+                    <img src="https://logo.clearbit.com/iit.edu" alt="IIT" onerror="this.outerHTML='<span style=font-size:1.1rem>🎓</span>'">
+                  </div>
+                  <div class="entry-body">
+                    <div class="entry-top">
+                      <strong>Illinois Institute of Technology</strong>
+                      <span class="entry-meta">Expected 2027</span>
+                    </div>
+                    <p class="entry-sub">B.S. Computer Science</p>
+                    <p class="entry-sub">M.A.S. Data Science</p>
+                    <p class="entry-sub" style="font-size:0.75rem;color:#94a3b8;margin-top:0.15rem;">GPA 3.5 · Dean's List</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
-      </div>
-    </section>
-
-    <!-- Main Project -->
-    <section class="section" style="padding-top:0.5rem;padding-bottom:1.5rem;">
-      <div class="container">
-        <h2 class="section-title" style="margin-bottom:0.75rem;">Main Project</h2>
-        <a href="https://ashburn-puce.vercel.app/" target="_blank" style="text-decoration:none;display:inline-block;max-width:360px;">
-          <div class="card" style="cursor:pointer;padding:0.85rem 1rem;">
-            <div class="card-header" style="margin-bottom:0.4rem;">
-              <div class="card-icon" style="font-size:1.1rem;">⌚</div>
-              <div class="card-meta">In Progress</div>
-            </div>
-            <h3 style="margin-bottom:0.15rem;font-size:1rem;">Ashburn Watch</h3>
-            <p class="card-subtitle" style="margin-bottom:0.3rem;">Arduino-Based Step Tracker</p>
-            <p style="font-size:0.82rem;margin-bottom:0.5rem;">A custom-built wearable device that tracks steps and activity using Arduino technology.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">Arduino</span>
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">IoT</span>
-              <span class="tech-tag">Hardware</span>
-            </div>
-          </div>
-        </a>
       </div>
     </section>
   </main>
