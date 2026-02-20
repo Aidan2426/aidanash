@@ -782,12 +782,12 @@ a {
 
 /* ── Resume Link ─────────────────────────────── */
 .social-links .resume-link {
-  width: auto;
-  height: auto;
-  border-radius: 6px;
-  background: transparent;
-  border: 1px solid currentColor;
-  display: flex;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  border: 1px solid currentColor !important;
+  display: flex !important;
   align-items: center;
   gap: 5px;
   font-size: 0.72rem;
@@ -798,9 +798,9 @@ a {
   transition: background 0.2s;
 }
 .social-links .resume-link:hover {
-  background: rgba(128, 128, 128, 0.15);
-  transform: none;
-  box-shadow: none;
+  background: rgba(128, 128, 128, 0.15) !important;
+  transform: none !important;
+  box-shadow: none !important;
   color: inherit;
 }
 

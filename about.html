@@ -19,7 +19,20 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-  
+<script>
+  if (localStorage.getItem('theme') !== 'light') {
+    document.body.classList.add('dark-mode');
+  }
+  function toggleTheme() {
+    var isDark = document.body.classList.toggle('dark-mode');
+    var icon  = document.getElementById('theme-icon');
+    var label = document.getElementById('theme-label');
+    if (icon)  icon.textContent  = isDark ? '☀️' : '🌙';
+    if (label) label.textContent = isDark ? 'Light' : 'Dark';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+</script>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
@@ -45,7 +58,7 @@
           </svg>
         </a>
         <!-- Resume -->
-        <a href="assets/Aidan_Ash_Resume.pdf" download class="resume-link" aria-label="Download Resume">
+        <a href="assets/Aidan_Ash_Resume.pdf" target="_blank" rel="noopener" class="resume-link" aria-label="View Resume">
           Resume
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/>
@@ -296,7 +309,15 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <script>
+    (function() {
+      var isDark = document.body.classList.contains('dark-mode');
+      var icon  = document.getElementById('theme-icon');
+      var label = document.getElementById('theme-label');
+      if (icon)  icon.textContent  = isDark ? '☀️' : '🌙';
+      if (label) label.textContent = isDark ? 'Light' : 'Dark';
+    })();
+  </script>
   <script src="js/main.js"></script>
 
 </body>

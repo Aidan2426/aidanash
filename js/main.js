@@ -1,21 +1,3 @@
-// Dark / Light Mode — dark is the default
-function toggleTheme() {
-  var isDark = document.body.classList.toggle('dark-mode');
-  var icon  = document.getElementById('theme-icon');
-  var label = document.getElementById('theme-label');
-  if (icon)  icon.textContent  = isDark ? '☀️' : '🌙';
-  if (label) label.textContent = isDark ? 'Light' : 'Dark';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
-(function() {
-  var isDark = localStorage.getItem('theme') !== 'light';
-  if (isDark) document.body.classList.add('dark-mode');
-  var icon  = document.getElementById('theme-icon');
-  var label = document.getElementById('theme-label');
-  if (icon)  icon.textContent  = isDark ? '☀️' : '🌙';
-  if (label) label.textContent = isDark ? 'Light' : 'Dark';
-})();
-
 // Mobile Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
