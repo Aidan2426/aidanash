@@ -43,8 +43,15 @@
       border:1px solid #e2e8f0; border-radius:12px;
       padding:1.2rem 1.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06);
     }
-    .tab-bar { display:flex; gap:0.5rem; margin-bottom:1.2rem; }
-    .tab-bar button { flex:1; font-size:0.88rem; padding:0.42rem 0; }
+    .tab-bar { display:inline-flex; background:#f1f5f9; border-radius:50px; padding:3px; margin-bottom:1.2rem; }
+    .tab-btn {
+      font-size:0.82rem; padding:0.32rem 1.1rem; border:none; border-radius:50px;
+      cursor:pointer; background:transparent; color:#64748b; font-weight:600;
+      transition:background 0.18s, color 0.18s, box-shadow 0.18s;
+      font-family:var(--font-display); text-transform:uppercase; letter-spacing:0.05em;
+    }
+    .tab-btn.active { background:var(--color-dark-blue); color:#fff; box-shadow:0 1px 4px rgba(0,0,0,.18); }
+    .tab-btn:hover:not(.active) { color:var(--color-blue); }
 
     /* Entry rows */
     .entry-row { display:flex; align-items:flex-start; gap:0.7rem; padding:0.65rem 0; }
@@ -273,8 +280,8 @@
           <div class="slider-card slider-card-full">
 
             <div class="tab-bar">
-              <button id="btn-work" class="btn btn-primary" onclick="showSlide('work')">Work</button>
-              <button id="btn-education" class="btn btn-secondary" onclick="showSlide('education')">Education</button>
+              <button id="btn-work" class="tab-btn active" onclick="showSlide('work')">Work</button>
+              <button id="btn-education" class="tab-btn" onclick="showSlide('education')">Education</button>
             </div>
 
             <!-- Work -->
@@ -407,18 +414,18 @@
 
         </div>
 
-        <!-- ── Accent Color Picker ───────────────────────── -->
-        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e2e8f0;">
-          <p style="font-size:0.82rem;font-weight:600;margin-bottom:0.75rem;color:#555;">accent color</p>
-          <div style="display:flex;gap:0.55rem;flex-wrap:wrap;align-items:center;">
-            <button class="accent-swatch" data-color="#2563eb" style="background:#2563eb" title="Royal Blue" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#4f46e5" style="background:#4f46e5" title="Indigo" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#7c3aed" style="background:#7c3aed" title="Purple" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#e11d48" style="background:#e11d48" title="Rose" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#16a34a" style="background:#16a34a" title="Green" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#0d9488" style="background:#0d9488" title="Teal" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#ea580c" style="background:#ea580c" title="Orange" onclick="setAccentColor(this.dataset.color)"></button>
-            <button class="accent-swatch" data-color="#64748b" style="background:#64748b" title="Slate" onclick="setAccentColor(this.dataset.color)"></button>
+        <!-- ── Theme Color Picker ────────────────────────── -->
+        <div class="card" style="margin-top:2rem;padding:1.25rem 1.5rem;">
+          <p style="font-size:0.82rem;font-weight:600;margin-bottom:0.85rem;">theme</p>
+          <div style="display:flex;gap:0.65rem;flex-wrap:wrap;align-items:center;">
+            <button class="accent-swatch" data-color="#2563eb" style="background-color:#2563eb" title="Royal Blue" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#4f46e5" style="background-color:#4f46e5" title="Indigo" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#7c3aed" style="background-color:#7c3aed" title="Purple" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#e11d48" style="background-color:#e11d48" title="Rose" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#16a34a" style="background-color:#16a34a" title="Green" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#0d9488" style="background-color:#0d9488" title="Teal" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#ea580c" style="background-color:#ea580c" title="Orange" onclick="setAccentColor(this.dataset.color)"></button>
+            <button class="accent-swatch" data-color="#64748b" style="background-color:#64748b" title="Slate" onclick="setAccentColor(this.dataset.color)"></button>
           </div>
         </div>
 
@@ -442,10 +449,10 @@
       var btnE = document.getElementById('btn-education');
       if (which === 'work') {
         work.style.display = ''; edu.style.display = 'none';
-        btnW.className = 'btn btn-primary'; btnE.className = 'btn btn-secondary';
+        btnW.className = 'tab-btn active'; btnE.className = 'tab-btn';
       } else {
         work.style.display = 'none'; edu.style.display = '';
-        btnW.className = 'btn btn-secondary'; btnE.className = 'btn btn-primary';
+        btnW.className = 'tab-btn'; btnE.className = 'tab-btn active';
       }
     }
     /* ── Photo Carousel ────────────────────── */
