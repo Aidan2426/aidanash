@@ -205,3 +205,5 @@ This project is open source and available for personal use.
 **Built with using HTML, CSS, and JavaScript**
 
 *Illinois Institute of Technology | Computer Science & Data Science | Class of 2027*
+
+**Code**
