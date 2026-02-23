@@ -842,7 +842,7 @@ body.dark-mode .social-links a {
   color: #d0d0d0;
 }
 body.dark-mode .social-links a:hover {
-  color: #2563eb;
+  color: var(--color-blue);
   background: none;
 }
 body.dark-mode .nav-links.active {
@@ -946,4 +946,4 @@ body.dark-mode .profile-socials a { color: #aaaaaa; }
 body.dark-mode .profile-socials a:hover { color: var(--color-blue); }
 body.dark-mode .photo-carousel { border-color: #2e2e2e; }
 body.dark-mode .carousel-dot { background: #444; }
-body.dark-mode .carousel-dot.active { background: #2563eb; }
+body.dark-mode .carousel-dot.active { background: var(--color-blue); }
