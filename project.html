@@ -4,18 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore Aidan Ash's technical projects including web applications, database systems, and hardware projects.">
-  
   <title>Projects | Aidan Ash</title>
-  
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/aidanashlogo.png">
 </head>
 <body>
@@ -39,16 +32,13 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-
-        <li><a href="project.html">Projects</a></li>
+        <li><a href="project.html" class="active">Projects</a></li>
       </ul>
-
       <div class="social-links">
         <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
           <span id="theme-icon">☀️</span>
         </button>
       </div>
-
       <button class="menu-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -57,67 +47,135 @@
 
   <!-- Main Content -->
   <main class="main-content">
+    <section class="section" style="padding:1.5rem 0 4rem;">
+      <div class="container" style="padding-top:0.5rem;padding-bottom:1rem;">
 
-    <!-- Projects Hero -->
-    <section class="hero" style="min-height: 60vh;">
-      <div class="hero-content">
-        <span class="hero-tag">Portfolio</span>
-        <h1>My <span>Projects</span></h1>
-        <p class="hero-subtitle">
-          From hardware prototypes to full-stack applications.
-        </p>
-      </div>
-    </section>
+        <h2 style="font-size:1.3rem;margin-bottom:1.5rem;font-family:var(--font-display);letter-spacing:-0.025em;text-transform:lowercase;font-weight:700;">projects</h2>
 
-    <!-- Projects Section -->
-    <section class="section">
-      <div class="container">
-        
         <div class="cards-grid">
-          
-          <!-- Heather Game -->
-          <div class="card project-card" data-tags="game,unity,csharp,narrative">
+
+          <!-- P33 Savings Application — Aug–Dec 2023 -->
+          <div class="card project-card" data-tags="python,mysql,database">
             <div class="card-header">
-              <div class="card-icon">🎮</div>
-              <div class="card-meta">February 2026</div>
+              <div class="card-icon">💰</div>
+              <div class="card-meta">Aug – Dec 2023</div>
             </div>
-            <h3>Heather.</h3>
-            <p class="card-subtitle">Narrative-Driven Game | 48-Hour Game Jam</p>
+            <h3>P33 Savings Application</h3>
+            <p class="card-subtitle">Financial Management Tool for Students</p>
             <p>
-              A short story about Ned, a quiet corporate employee struggling to confront his troubled past. Explores themes of grief, forgiveness, and isolation through interactive storytelling. Created for Micro Jam 053: Isolation.
+              A Python-based savings application developed in partnership with Chase Bank, designed specifically for college students. Features comprehensive income/expense tracking, budgeting tools, and transaction logging.
             </p>
-            
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Game Features</h4>
+            <h4 class="project-section-heading">Core Functionality</h4>
             <ul>
-              <li>Atmospheric narrative experience exploring deep emotional themes</li>
-              <li>Interactive storytelling with meaningful player choices</li>
-              <li>Original soundtrack and immersive audio design</li>
-              <li>Developed in 48 hours with CAsh Interactive team</li>
+              <li>Income and expense tracking with categorization</li>
+              <li>Budget planning and goal setting</li>
+              <li>MySQL-backed transaction logging</li>
+              <li>Financial insights and spending analysis</li>
+              <li>Secure data storage and user authentication</li>
             </ul>
-
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">My Role</h4>
+            <h4 class="project-section-heading">Development Process</h4>
             <ul>
-              <li>Design and programming alongside Cal Graham</li>
-              <li>Gameplay mechanics implementation</li>
-              <li>Collaborated with composer and testers</li>
+              <li>Conducted weekly stand-up meetings with development team</li>
+              <li>Collaborated with Chase Bank representatives</li>
+              <li>Presented final project to panel of judges</li>
+              <li>Implemented agile development methodology</li>
             </ul>
-
             <div class="tech-tags">
-              <span class="tech-tag">Game Design</span>
-              <span class="tech-tag">Unity</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">Narrative Design</span>
-              <span class="tech-tag">Game Jam</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Chase Bank API</span>
+              <span class="tech-tag">Financial Tech</span>
+              <span class="tech-tag">Agile</span>
             </div>
-
-            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-              <a href="https://cash-interactive.itch.io/heather" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">
-                Play on itch.io
+            <div style="margin-top:1.5rem;">
+              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="width:100%;text-align:center;">
+                View on GitHub
               </a>
             </div>
           </div>
 
-          <!-- Funky Forest Game -->
+          <!-- Wordle Emulation — Jan–Feb 2025 -->
+          <div class="card project-card" data-tags="javascript,html,css,web">
+            <div class="card-header">
+              <div class="card-icon">🟩</div>
+              <div class="card-meta">Jan – Feb 2025</div>
+            </div>
+            <h3>Wordle Emulation</h3>
+            <p class="card-subtitle">Web-Based Word Guessing Game</p>
+            <p>
+              A browser-based recreation of the popular Wordle game, built entirely with vanilla HTML, CSS, and JavaScript. Features dynamic feedback, interactive UI, and word validation.
+            </p>
+            <h4 class="project-section-heading">Features</h4>
+            <ul>
+              <li>Dynamic feedback system with color-coded tiles</li>
+              <li>Interactive keyboard UI with state tracking</li>
+              <li>Word validation against dictionary</li>
+              <li>Responsive design for mobile and desktop</li>
+              <li>Game state management and win/loss detection</li>
+            </ul>
+            <h4 class="project-section-heading">Learning Outcomes</h4>
+            <ul>
+              <li>DOM manipulation and event handling</li>
+              <li>CSS animations and transitions</li>
+              <li>Client-side game logic implementation</li>
+              <li>User interface design principles</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">DOM Manipulation</span>
+              <span class="tech-tag">Game Dev</span>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="width:100%;text-align:center;">
+                View Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Real Estate Management — Jan–May 2025 -->
+          <div class="card project-card" data-tags="java,postgresql,database">
+            <div class="card-header">
+              <div class="card-icon">🏠</div>
+              <div class="card-meta">Jan – May 2025</div>
+            </div>
+            <h3>Real Estate Management Application</h3>
+            <p class="card-subtitle">Database-Driven Property Management System</p>
+            <p>
+              A comprehensive full-stack application for managing real estate properties, built with Java and PostgreSQL. Features user authentication, property search functionality, and booking management.
+            </p>
+            <h4 class="project-section-heading">Key Features</h4>
+            <ul>
+              <li>User registration and authentication system</li>
+              <li>Advanced property search with filtering</li>
+              <li>Booking and reservation management</li>
+              <li>Role-based access control</li>
+              <li>Optimized SQL queries with indexing</li>
+            </ul>
+            <h4 class="project-section-heading">Technical Implementation</h4>
+            <ul>
+              <li>Designed relational database schema with normalized tables</li>
+              <li>Implemented backend logic using Java and JDBC</li>
+              <li>Created efficient PostgreSQL queries and stored procedures</li>
+              <li>Applied database indexing for performance optimization</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">pgAdmin</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">JDBC</span>
+              <span class="tech-tag">Database Design</span>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="width:100%;text-align:center;">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Funky Forest — Oct 2025 -->
           <div class="card project-card" data-tags="game,unity,csharp,casual">
             <div class="card-header">
               <div class="card-icon">🌳</div>
@@ -128,8 +186,7 @@
             <p>
               A funky monkey party game where players explore to find seeds and plant a variety of fantabulous trees! Build a beautifully funkalicious forest and accumulate enough leaves to start the ultimate monkey party extravaganza. Created during a 24-hour game jam at IIT.
             </p>
-            
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Game Features</h4>
+            <h4 class="project-section-heading">Game Features</h4>
             <ul>
               <li>Exploration and resource gathering mechanics</li>
               <li>Multiple tree varieties with unique characteristics</li>
@@ -137,7 +194,6 @@
               <li>Colorful, whimsical art style and atmosphere</li>
               <li>Completed in 24 hours with CAsh Interactive</li>
             </ul>
-
             <div class="tech-tags">
               <span class="tech-tag">Game Design</span>
               <span class="tech-tag">Unity</span>
@@ -145,16 +201,55 @@
               <span class="tech-tag">Casual Gaming</span>
               <span class="tech-tag">24hr Game Jam</span>
             </div>
-
-            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-              <a href="https://cash-interactive.itch.io/funky-forest" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">
+            <div style="margin-top:1.5rem;">
+              <a href="https://cash-interactive.itch.io/funky-forest" target="_blank" class="btn btn-primary" style="flex:1;text-align:center;display:block;">
                 Play on itch.io
               </a>
             </div>
           </div>
 
-          <!-- Ashburn Project -->
+          <!-- Heather — Feb 2026 -->
+          <div class="card project-card" data-tags="game,unity,csharp,narrative">
+            <img src="assets/heather.png" alt="Heather Game" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:1rem;display:block;">
+            <div class="card-header">
+              <div class="card-icon">🎮</div>
+              <div class="card-meta">February 2026</div>
+            </div>
+            <h3>Heather.</h3>
+            <p class="card-subtitle">Narrative-Driven Game | 48-Hour Game Jam</p>
+            <p>
+              A short story about Ned, a quiet corporate employee struggling to confront his troubled past. Explores themes of grief, forgiveness, and isolation through interactive storytelling. Created for Micro Jam 053: Isolation.
+            </p>
+            <h4 class="project-section-heading">Game Features</h4>
+            <ul>
+              <li>Atmospheric narrative experience exploring deep emotional themes</li>
+              <li>Interactive storytelling with meaningful player choices</li>
+              <li>Original soundtrack and immersive audio design</li>
+              <li>Developed in 48 hours with CAsh Interactive team</li>
+            </ul>
+            <h4 class="project-section-heading">My Role</h4>
+            <ul>
+              <li>Design and programming alongside Cal Graham</li>
+              <li>Gameplay mechanics implementation</li>
+              <li>Collaborated with composer and testers</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Game Design</span>
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Narrative Design</span>
+              <span class="tech-tag">Game Jam</span>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <a href="https://cash-interactive.itch.io/heather" target="_blank" class="btn btn-primary" style="display:block;text-align:center;">
+                Play on itch.io
+              </a>
+            </div>
+          </div>
+
+          <!-- Ashburn — In Progress -->
           <div class="card project-card" data-tags="arduino,hardware,cpp,iot">
+            <img src="assets/ashBurnHome.png" alt="Ashburn Watch Dashboard" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:1rem;display:block;">
             <div class="card-header">
               <div class="card-icon">⌚</div>
               <div class="card-meta">In Progress</div>
@@ -164,15 +259,13 @@
             <p>
               A custom wearable device designed to track steps and monitor physical activity. Built using Arduino microcontrollers and programmed in C++, this project combines hardware engineering with embedded software development.
             </p>
-            
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Features</h4>
+            <h4 class="project-section-heading">Features</h4>
             <ul>
               <li>Real-time step counting using accelerometer sensors</li>
               <li>Low-power design for extended battery life</li>
               <li>Compact wearable form factor</li>
               <li>Data logging and activity tracking</li>
             </ul>
-
             <div class="tech-tags">
               <span class="tech-tag">Arduino</span>
               <span class="tech-tag">C++</span>
@@ -180,175 +273,19 @@
               <span class="tech-tag">Hardware Design</span>
               <span class="tech-tag">Embedded Systems</span>
             </div>
-
-            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-              <a href="https://ashburn-puce.vercel.app/" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">
+            <div style="margin-top:1.5rem;display:flex;gap:1rem;">
+              <a href="https://ashburn-puce.vercel.app/" target="_blank" class="btn btn-primary" style="flex:1;text-align:center;">
                 View Project
               </a>
-              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center;">
+              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="flex:1;text-align:center;">
                 GitHub
               </a>
             </div>
           </div>
 
-          <!-- Real Estate Management Application -->
-          <div class="card project-card" data-tags="java,postgresql,database">
-            <div class="card-header">
-              <div class="card-icon">🏠</div>
-              <div class="card-meta">January 2025 - May 2025</div>
-            </div>
-            <h3>Real Estate Management Application</h3>
-            <p class="card-subtitle">Database-Driven Property Management System</p>
-            <p>
-              A comprehensive full-stack application for managing real estate properties, built with Java and PostgreSQL. Features user authentication, property search functionality, and booking management.
-            </p>
-            
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Key Features</h4>
-            <ul>
-              <li>User registration and authentication system</li>
-              <li>Advanced property search with filtering</li>
-              <li>Booking and reservation management</li>
-              <li>Role-based access control</li>
-              <li>Optimized SQL queries with indexing</li>
-            </ul>
-
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Technical Implementation</h4>
-            <ul>
-              <li>Designed relational database schema with normalized tables</li>
-              <li>Implemented backend logic using Java and JDBC</li>
-              <li>Created efficient PostgreSQL queries and stored procedures</li>
-              <li>Applied database indexing for performance optimization</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">pgAdmin</span>
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">JDBC</span>
-              <span class="tech-tag">Database Design</span>
-            </div>
-
-            <div style="margin-top: 1.5rem;">
-              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">
-                View on GitHub
-              </a>
-            </div>
-          </div>
-
-          <!-- Wordle Emulation -->
-          <div class="card project-card" data-tags="javascript,html,css,web">
-            <div class="card-header">
-              <div class="card-icon">🎮</div>
-              <div class="card-meta">January 2025 - February 2025</div>
-            </div>
-            <h3>Wordle Emulation</h3>
-            <p class="card-subtitle">Web-Based Word Guessing Game</p>
-            <p>
-              A browser-based recreation of the popular Wordle game, built entirely with vanilla HTML, CSS, and JavaScript. Features dynamic feedback, interactive UI, and word validation.
-            </p>
-            
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Features</h4>
-            <ul>
-              <li>Dynamic feedback system with color-coded tiles</li>
-              <li>Interactive keyboard UI with state tracking</li>
-              <li>Word validation against dictionary</li>
-              <li>Responsive design for mobile and desktop</li>
-              <li>Game state management and win/loss detection</li>
-            </ul>
-
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Learning Outcomes</h4>
-            <ul>
-              <li>DOM manipulation and event handling</li>
-              <li>CSS animations and transitions</li>
-              <li>Client-side game logic implementation</li>
-              <li>User interface design principles</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">DOM Manipulation</span>
-              <span class="tech-tag">Game Development</span>
-            </div>
-
-            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center;">
-                View Code
-              </a>
-            </div>
-          </div>
-
-          <!-- P33 Savings Application -->
-          <div class="card project-card" data-tags="python,mysql,database">
-            <div class="card-header">
-              <div class="card-icon">💰</div>
-              <div class="card-meta">August 2023 - December 2023</div>
-            </div>
-            <h3>P33 Savings Application</h3>
-            <p class="card-subtitle">Financial Management Tool for Students</p>
-            <p>
-              A Python-based savings application developed in partnership with Chase Bank, designed specifically for college students. Features comprehensive income/expense tracking, budgeting tools, and transaction logging.
-            </p>
-            
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Core Functionality</h4>
-            <ul>
-              <li>Income and expense tracking with categorization</li>
-              <li>Budget planning and goal setting</li>
-              <li>MySQL-backed transaction logging</li>
-              <li>Financial insights and spending analysis</li>
-              <li>Secure data storage and user authentication</li>
-            </ul>
-
-            <h4 style="font-size: 1rem; margin: 1.5rem 0 0.75rem; color: var(--color-dark-blue);">Development Process</h4>
-            <ul>
-              <li>Conducted weekly stand-up meetings with development team</li>
-              <li>Collaborated with Chase Bank representatives</li>
-              <li>Presented final project to panel of judges</li>
-              <li>Implemented agile development methodology</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Chase Bank API</span>
-              <span class="tech-tag">Financial Tech</span>
-              <span class="tech-tag">Agile Development</span>
-            </div>
-
-            <div style="margin-top: 1.5rem;">
-              <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">
-                View on GitHub
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Additional Projects Coming Soon -->
-    <section class="section" style="background: var(--color-white); padding: 4rem 0;">
-      <div class="container">
-        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-          <h2 style="margin-bottom: 1.5rem;">More Projects Coming Soon</h2>
-          <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">
-            I'm constantly working on new projects and exploring emerging technologies. Check back regularly for updates, or follow me on GitHub to see my latest work.
-          </p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://github.com/Aidan2426" target="_blank" class="btn btn-primary">
-              Follow on GitHub
-            </a>
-            <a href="mailto:aash3@hawk.illinoistech.edu" class="btn btn-secondary">
-              Collaborate With Me
-            </a>
-          </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -357,7 +294,6 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-
         <a href="project.html">Projects</a>
       </div>
       <p>&copy; 2026 Aidan Ash. All rights reserved.</p>
@@ -368,9 +304,7 @@
     (function() {
       var isDark = document.body.classList.contains('dark-mode');
       var icon  = document.getElementById('theme-icon');
-      var label = document.getElementById('theme-label');
-      if (icon)  icon.textContent  = isDark ? '☀️' : '🌙';
-      if (label) label.textContent = isDark ? 'Light' : 'Dark';
+      if (icon) icon.textContent = isDark ? '☀️' : '🌙';
     })();
   </script>
   <script src="js/main.js"></script>
