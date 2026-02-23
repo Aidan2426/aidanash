@@ -935,6 +935,9 @@ body.dark-mode .logo-box { background: #0d0d0d !important; border-color: #2e2e2e
 body.dark-mode .entry-meta { color: #888888 !important; }
 body.dark-mode .entry-sub  { color: #aaaaaa !important; }
 body.dark-mode .entry-bullets { color: #aaaaaa; }
+body.dark-mode .courses-summary { color: #888; }
+body.dark-mode .courses-summary:hover { color: var(--color-blue); }
+body.dark-mode .courses-col span { color: #888; }
 body.dark-mode .divider { border-color: #2e2e2e; }
 body.dark-mode .info-left p { color: #aaaaaa; }
 body.dark-mode .skill-card { background: #1a1a1a; border-color: #2e2e2e; color: #f0f0f0; }

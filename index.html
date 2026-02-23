@@ -70,6 +70,27 @@
     .entry-bullets { margin:0.35rem 0 0 0; padding-left:1.1rem; font-size:0.75rem; color:#64748b; }
     .entry-bullets li { margin-bottom:0.2rem; line-height:1.4; }
 
+    /* ── Courses Dropdown ────────────────────── */
+    .courses-dropdown { margin-top:0.55rem; }
+    .courses-summary {
+      font-size:0.72rem; font-weight:600; color:#64748b; cursor:pointer;
+      list-style:none; display:inline-flex; align-items:center; gap:0.3rem;
+      user-select:none; transition:color 0.15s;
+    }
+    .courses-summary::-webkit-details-marker { display:none; }
+    .courses-summary::after { content:'▾'; font-size:0.65rem; transition:transform 0.2s; display:inline-block; }
+    details[open] .courses-summary::after { transform:rotate(-180deg); }
+    .courses-summary:hover { color:var(--color-blue); }
+    .courses-grid {
+      display:flex; gap:1rem; margin-top:0.45rem; flex-wrap:wrap;
+    }
+    .courses-col {
+      display:flex; flex-direction:column; gap:0.22rem; flex:1; min-width:160px;
+    }
+    .courses-col span {
+      font-size:0.7rem; color:#64748b; line-height:1.4;
+    }
+
     /* ── Profile Socials ─────────────────────── */
     .profile-socials { display:flex; align-items:center; gap:0.65rem; margin-top:0.55rem; }
     .profile-socials a { color:#555; transition:color 0.2s; display:flex; align-items:center; gap:4px; }
@@ -363,6 +384,25 @@
                   <p class="entry-sub">B.S. Computer Science</p>
                   <p class="entry-sub">M.A.S. Data Science</p>
                   <p class="entry-sub" style="font-size:0.75rem;color:#94a3b8;margin-top:0.15rem;">GPA 3.5 · Dean's List</p>
+                  <details class="courses-dropdown">
+                    <summary class="courses-summary">Courses</summary>
+                    <div class="courses-grid">
+                      <div class="courses-col">
+                        <span>CSP554 Big Data Technologies</span>
+                        <span>CS331 Data Structures and Algorithms</span>
+                        <span>CS487 Software Engineering</span>
+                        <span>CS425 Database Organization</span>
+                        <span>CS450 Operating Systems</span>
+                      </div>
+                      <div class="courses-col">
+                        <span>CS201 Accelerated Intro to CS</span>
+                        <span>CS350 Computer Organization &amp; Assembly</span>
+                        <span>CS351 Systems Programming</span>
+                        <span>CS440 Programming Languages &amp; Translators</span>
+                        <span>CS458 Intro to Information Security</span>
+                      </div>
+                    </div>
+                  </details>
                 </div>
               </div>
             </div>
