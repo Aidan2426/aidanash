@@ -27,11 +27,15 @@
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: 'Space Mono', 'Courier New', monospace;
   background-color: var(--color-white);
   color: var(--color-black);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+body, body * {
+  font-family: 'Space Mono', 'Courier New', monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
