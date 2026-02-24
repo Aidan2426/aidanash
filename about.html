@@ -3,19 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Aidan Ash - Computer Science and Data Science student with experience in IT, software development, and systems management.">
-  
+  <meta name="description" content="About Aidan Ash - Computer Science and Data Science student at Illinois Institute of Technology.">
   <title>About | Aidan Ash</title>
-  
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/aidanashlogo.png">
 </head>
 <body>
@@ -38,17 +31,14 @@
     <div class="nav-container">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="project.html">Projects</a></li>
       </ul>
-
       <div class="social-links">
         <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
           <span id="theme-icon">☀️</span>
         </button>
       </div>
-
       <button class="menu-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -57,218 +47,23 @@
 
   <!-- Main Content -->
   <main class="main-content">
+    <section class="section" style="padding:2rem 0 4rem;">
+      <div class="container" style="max-width:900px;">
 
-    <!-- About Hero -->
-    <section class="hero" style="min-height: 60vh;">
-      <div class="hero-content">
-        <span class="hero-tag">About Me</span>
-        <h1>Building the Future<br>One Line at a Time</h1>
-        <p class="hero-subtitle">
-          Passionate about technology, problem-solving, and creating meaningful solutions.
-        </p>
-      </div>
-    </section>
-
-    <!-- Bio Section -->
-    <section class="section">
-      <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;">
-          <div class="card" style="padding: 3rem;">
-            <h2 style="margin-bottom: 2rem;">Who I Am</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-              I'm a graduate student at the Illinois Institute of Technology pursuing a dual degree in Computer Science (B.S.) and Data Science (M.A.S.), with an expected graduation in May 2027. Currently maintaining a 3.5 GPA while actively involved in campus organizations and athletics.
-            </p>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-              My journey in tech began with a curiosity about how systems work and has evolved into a passion for building scalable solutions. From managing 5000+ devices as an IT intern to developing database-driven applications and creating games during hackathons, I thrive on tackling complex technical challenges.
-            </p>
-            <p style="font-size: 1.1rem; line-height: 1.8;">
-              Beyond coding, I'm a member of the Men's Soccer Team, Association of Computing Machinery, Codify Club, and Photography Club. I'm also part of CAsh Interactive, a game development team where we've created multiple games during 24 and 48-hour game jams. I believe in the intersection of technology and creativity, always looking for ways to merge analytical thinking with innovative solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section" style="background: var(--color-white); padding: 4rem 0;">
-      <div class="container">
-        <h2 class="section-title">Education</h2>
-        
-        <div class="cards-grid" style="grid-template-columns: 1fr;">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">🎓</div>
-              <div class="card-meta">Expected May 2027</div>
-            </div>
-            <h3>Illinois Institute of Technology</h3>
-            <p class="card-subtitle">Chicago, Illinois</p>
-            <div style="margin-bottom: 1.5rem;">
-              <p style="font-weight: 600; color: var(--color-dark-blue); margin-bottom: 0.5rem;">
-                Master of Applied Science in Data Science
-              </p>
-              <p style="font-weight: 600; color: var(--color-dark-blue);">
-                Bachelor of Science in Computer Science
-              </p>
-              <p style="margin-top: 1rem; font-size: 1rem;">
-                <strong>Cumulative GPA:</strong> 3.5 / 4.0
-              </p>
-            </div>
-            
-            <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-dark-blue);">Relevant Coursework</h4>
-            <ul>
-              <li>Data Structures and Algorithms</li>
-              <li>Database Organization</li>
-              <li>Software Engineering I</li>
-              <li>Programming in Java</li>
-              <li>Discrete Structures</li>
-              <li>Computer Organization and Assembly Language Programming</li>
-              <li>Systems Programming</li>
-              <li>Programming Languages</li>
-            </ul>
-
-            <h4 style="font-size: 1.1rem; margin: 1.5rem 0 1rem; color: var(--color-dark-blue);">Extracurricular & Honors</h4>
-            <div class="tech-tags">
-              <span class="tech-tag">Dean's List</span>
-              <span class="tech-tag">Men's Soccer Team</span>
-              <span class="tech-tag">ACM</span>
-              <span class="tech-tag">Codify Club</span>
-              <span class="tech-tag">Photography Club</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        
-        <div class="skills-grid">
-          
-          <div class="skill-category">
-            <h3>Languages</h3>
-            <div class="skill-items">
-              <span class="skill-item">Python</span>
-              <span class="skill-item">Java</span>
-              <span class="skill-item">SQL</span>
-              <span class="skill-item">C</span>
-              <span class="skill-item">HTML</span>
-              <span class="skill-item">CSS</span>
-              <span class="skill-item">JavaScript</span>
-              <span class="skill-item">Assembly</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Tools & Technologies</h3>
-            <div class="skill-items">
-              <span class="skill-item">Jamf</span>
-              <span class="skill-item">Intune</span>
-              <span class="skill-item">Apple School Manager</span>
-              <span class="skill-item">Sherpadesk</span>
-              <span class="skill-item">Git</span>
-              <span class="skill-item">Excel</span>
-              <span class="skill-item">Jupyter Notebook</span>
-              <span class="skill-item">Ubuntu</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Platforms & Systems</h3>
-            <div class="skill-items">
-              <span class="skill-item">Windows</span>
-              <span class="skill-item">MacOS</span>
-              <span class="skill-item">Linux</span>
-              <span class="skill-item">PostgreSQL</span>
-              <span class="skill-item">MySQL</span>
-              <span class="skill-item">pgAdmin</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Specializations</h3>
-            <div class="skill-items">
-              <span class="skill-item">Database Design</span>
-              <span class="skill-item">System Administration</span>
-              <span class="skill-item">Network Configuration</span>
-              <span class="skill-item">Device Management</span>
-              <span class="skill-item">Software Development</span>
-              <span class="skill-item">Data Analysis</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Interests Section -->
-    <section class="section" style="background: var(--color-white); padding: 4rem 0;">
-      <div class="container">
-        <h2 class="section-title">Interests & Hobbies</h2>
-        
-        <div class="cards-grid">
-          
-          <div class="card">
-            <div class="card-icon">⚽</div>
-            <h3>Athletics</h3>
-            <p>
-              Active member of IIT's Men's Soccer Team, balancing competitive athletics with academic excellence. Sports taught me teamwork, discipline, and resilience.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">📷</div>
-            <h3>Photography</h3>
-            <p>
-              Member of the Photography Club, exploring the intersection of art and technology. Capturing moments and telling stories through visual media.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🎮</div>
-            <h3>Game Development</h3>
-            <p>
-              Member of CAsh Interactive game development team. Participated in multiple game jams including 24-hour and 48-hour challenges, creating narrative-driven and casual games.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">💻</div>
-            <h3>Hardware Projects</h3>
-            <p>
-              Building custom hardware solutions like the Ashburn step tracker. Passionate about IoT, embedded systems, and the physical side of computing.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🌐</div>
-            <h3>Tech Communities</h3>
-            <p>
-              Active in ACM and Codify Club, collaborating with peers on coding challenges, hackathons, and staying current with industry trends.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="section">
-      <div class="container">
-        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-          <h2 style="margin-bottom: 1.5rem;">Let's Work Together</h2>
-          <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-            I'm always interested in hearing about new opportunities, collaborations, or just connecting with fellow tech enthusiasts.
+        <div class="card" style="background:#111111;border-color:#222;padding:3rem;">
+          <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem;color:#ffffff;">
+            I'm a graduate student at the Illinois Institute of Technology pursuing a dual degree in Computer Science (B.S.) and Data Science (M.A.S.), with an expected graduation in May 2027. Currently maintaining a 3.5 GPA while actively involved in campus organizations and athletics.
           </p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="mailto:aash3@hawk.illinoistech.edu" class="btn btn-primary">Get In Touch</a>
-            <a href="assets/Aidan_Ash_Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
-          </div>
+          <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem;color:#ffffff;">
+            My journey in tech began with a curiosity about how systems work and has evolved into a passion for building scalable solutions. From managing 5,000+ devices as an IT intern to developing database-driven applications and creating games during hackathons, I thrive on tackling complex technical challenges.
+          </p>
+          <p style="font-size:1.1rem;line-height:1.8;color:#ffffff;">
+            Beyond coding, I'm a member of the Men's Soccer Team, Association of Computing Machinery, Codify Club, and Photography Club. I'm also part of CAsh Interactive, a game development team where we've created multiple games during 24 and 48-hour game jams. I believe in the intersection of technology and creativity, always looking for ways to merge analytical thinking with innovative solutions.
+          </p>
         </div>
+
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -277,7 +72,6 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-
         <a href="project.html">Projects</a>
       </div>
       <p>&copy; 2026 Aidan Ash. All rights reserved.</p>
@@ -288,9 +82,7 @@
     (function() {
       var isDark = document.body.classList.contains('dark-mode');
       var icon  = document.getElementById('theme-icon');
-      var label = document.getElementById('theme-label');
-      if (icon)  icon.textContent  = isDark ? '☀️' : '🌙';
-      if (label) label.textContent = isDark ? 'Light' : 'Dark';
+      if (icon) icon.textContent = isDark ? '☀️' : '🌙';
     })();
   </script>
   <script src="js/main.js"></script>
