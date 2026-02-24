@@ -197,7 +197,7 @@ This project is open source and available for personal use.
 **Aidan Ash**
 - 🌐 Website: [https://aidan2426.github.io/aidanash/](https://aidan2426.github.io/aidanash/)
 - 📧 Email: aash3@hawk.illinoistech.edu
-- 💼 LinkedIn: [linkedin.com/in/aidan-ash-806641283](https://www.linkedin.com/in/aidan-ash-806641283/)
+- 💼 LinkedIn: [linkedin.com/in/aidan-ash](https://www.linkedin.com/in/aidan-ash/)
 - 💻 GitHub: [github.com/Aidan2426](https://github.com/Aidan2426)
 
 ---
