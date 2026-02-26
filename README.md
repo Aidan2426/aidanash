@@ -204,6 +204,7 @@ This project is open source and available for personal use.
 
 **Built with using HTML, CSS, and JavaScript**
 #change2
+#got an exam tmr and can't code much
 
 *Illinois Institute of Technology | Computer Science & Data Science | Class of 2027*
 
